@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mybatis.ictiyDAO.ICtiy">
+
+
+   
+
+	<select id="select"  resultType="ctiy">
+		select * from ctiy
+	</select>
+	<insert id="insert" parameterType="ctiy">
+		insert into ctiy (name) value(#{name})
+	</insert>	
+	<delete id="delete" parameterType="int">
+		delete from ctiy where id=#{0}
+	</delete>
+	<update id="update" parameterType="ctiy">
+		 update ctiy set name=#{name}
+	</update>
+</mapper>
